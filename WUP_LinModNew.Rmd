@@ -107,7 +107,13 @@ cor(SIMS~GRIP,data=data)
 GRIP has a smaller correlation with SIMS at 0.64, compared to SIMS with ARM, which is 0.69.
 
 ### Inferential  (Build model.2)
-  
+
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```  
+
+If we look at the Adjusted R-squared value of this GRIP data, it is smaller than the ARM data's Adjusted R-squared. In addition, the residual standard error is larger for this GRIP data than the ARM data. In conclusion based off these values, Model 1 is doing a better job at explaining our prediction and it's the better model. 
 
 #### predict model.2 at target point
 
