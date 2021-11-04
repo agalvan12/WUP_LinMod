@@ -140,10 +140,6 @@ Here is the result of the scatterplot and our best fit line for our GRIP and SIM
 
 ## Model 3 SIM~ARM+GRIP
 
-```{r}
-plot(SIMS~ARM+GRIP,data=data)
-```
-
 ### Numerical results (cor)
 
 ```{r}
@@ -154,10 +150,20 @@ We have a positive correlation between using both ARM and GRIP data. The correla
 
 ### Inferential  (Build 2-dimentional model.3)
 
+```{r}
+model.3 <- lm(SIMS~ARM+GRIP,data=data)
+summary.lm(model.3)
+```  
 
+Fit equation is SIMS=-5.43 + GRIP * 0.02 + ARM * 0.04
 
 #### predict model.3 at target point
-  
+
+Our residual standard error is 1.144 which is smaller than our other models. Also our multiple R-squared is bigger, which makes this a better fit model.
+
+```{r}
+predict(model.3,new, interval = "prediction")
+```
 
 ## Comparing nested models ANOVA Test
 
