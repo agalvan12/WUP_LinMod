@@ -146,9 +146,15 @@ plot(SIMS~ARM+GRIP,data=data)
 
 ### Numerical results (cor)
 
-`
-  
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
+
+We have a positive correlation between using both ARM and GRIP data. The correlation we got using both ARM and GRIP at the same time is higher than using either ARM or GRIP by themselves.
+
 ### Inferential  (Build 2-dimentional model.3)
+
+
 
 #### predict model.3 at target point
   
