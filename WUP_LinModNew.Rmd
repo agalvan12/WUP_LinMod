@@ -100,6 +100,11 @@ This scatterplot also shows that the points go uphill to the right. My predictio
 
 ### Numerical results 
 
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+
+GRIP has a smaller correlation with SIMS at 0.64, compared to SIMS with ARM, which is 0.69.
 
 ### Inferential  (Build model.2)
   
